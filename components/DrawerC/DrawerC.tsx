@@ -11,7 +11,13 @@ import HomeIcon from "@mui/icons-material/Home";
 import Link from "next/link";
 import * as React from "react";
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
-export default function DrawerC({ toggleDrawer }: any) {
+export default function DrawerC({
+  toggleDrawer,
+}: {
+  toggleDrawer: (
+    open: boolean
+  ) => (event: React.KeyboardEvent | React.MouseEvent) => void;
+}) {
   return (
     <Box
       sx={{ width: 250 }}
